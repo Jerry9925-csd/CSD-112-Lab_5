@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Course Table</title>
+    <style>
+        /* General Table Styling */
+/* General Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    border: 2px solid white; /* White border for the entire table */
+}
+
+/* Table Caption */
+caption {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Table Headers */
+th {
+    background-color: #d1c7b7; /* Light brown */
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid white; /* White border */
+    text-align: center;
+}
+
+/* Course Header Row (Merged Course Column) */
+thead tr:first-child th {
+    background-color: #d1c7b7; /* Matching header color */
+}
+
+/* Term Column (Fall, Winter) */
+.term {
+    background-color:  #d1c7b7; /* Slightly darker beige */
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid white; /* White border */
+}
+
+/* Course Data Cells */
+td {
+    border: 2px solid white; /* White border */
+    padding: 8px;
+    text-align: left;
+}
+
+/* Specific Rows (5,7,9,11,13,15) */
+.highlight-row {
+    background-color: #e0d8c9; /* Light cream color */
+    border: 2px solid white; /* White border */
+}
+
+/* Course Details Default Background */
+.course-details {
+    background-color: #f5f0e6; /* Light beige */
+    border: 2px solid white; /* White border */
+}
+
+/* Total Row */
+.total {
+    background-color: #d1c7b7;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid white; /* White border */
+}
+
+    </style>
+</head>
+<body>
+
+<table>
+    <!-- table caption -->
+    <caption>
+        Table 1. Current Courses
+      </caption>
+      <!-- table head section -->
+      <thead>
+        <tr>
+          <th scope="col" rowspan="2">Term</th>
+          <th scope="col" colspan="3">Course</th>
+        </tr>
+        <tr>
+          <th scope="col">Code</th>
+          <th scope="col">Name</th>
+          <th scope="col">Hrs/Week</th>
+        </tr>
+      </thead>
+      <!-- table body section -->
+
+    <tr>
+        <td class="term" rowspan="6">Fall</td>
+        <td class="course-details">CSD105</td>
+        <td class="course-details">Python</td>
+        <td class="course-details">3</td>
+    </tr>
+    <tr>
+        <td class="course-details">CMM115</td>
+        <td class="course-details">Communications I</td>
+        <td class="course-details">3</td>
+    </tr>
+    <tr class="highlight-row">
+        <td>CSD120</td>
+        <td>Introduction to Web Development</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td class="course-details">CSO104</td>
+        <td class="course-details">Introduction to Operating Systems and LAN</td>
+        <td class="course-details">4</td>
+    </tr>
+    <tr class="highlight-row">
+        <td>MTH122</td>
+        <td>Computer Mathematics</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td class="course-details">TNY130</td>
+        <td class="course-details">Technology in Society</td>
+        <td class="course-details">2</td>
+    </tr>
+    <tr>
+        <td class="term" rowspan="5">Winter</td>
+        <td class="course-details">CSA103</td>
+        <td class="course-details">Business Applications I</td>
+        <td class="course-details">4</td>
+    </tr>
+    <tr class="highlight-row">
+        <td>CSD102</td>
+        <td>Programming Using C++</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td class="course-details">CSD212</td>
+        <td class="course-details">Web Scripting Languages</td>
+        <td class="course-details">4</td>
+    </tr>
+    <tr class="highlight-row">
+        <td>CSO102</td>
+        <td>Introduction to Linux</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td class="course-details">CST104</td>
+        <td class="course-details">PC Hardware and Networking</td>
+        <td class="course-details">5</td>
+    </tr>
+    <tr>
+        <td colspan="3" class="total">Total</td>
+        <td class="total">41</td>
+    </tr>
+</table>
+
+</body>
+</html>
